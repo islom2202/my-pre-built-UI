@@ -1,2 +1,2 @@
-import  "./components/hover-effects/hover1.js"
+import  "./components/hover-effects/hover1/hover1.js"
 
