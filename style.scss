@@ -1,5 +1,6 @@
 @use "./components/hover-effects/hover1/hover1";
 @use "./components/hover-effects/hover2/hover2";
+@use "./components/burger-animations/burger1/burger1";
 *{
   list-style: none;
   margin: 0;
@@ -7,3 +8,6 @@
   box-sizing: border-box;
 }
 
+section{
+  padding: 80px 2vw;
+}

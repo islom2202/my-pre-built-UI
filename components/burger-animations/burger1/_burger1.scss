@@ -1,0 +1,52 @@
+  :root{
+  --line-width: 25px;
+  --line-height: 4px;
+  --gap: 5px;
+  --burger-height:
+  /*we set width to this the height of burger*1.2 after it is checked*/
+   calc(
+    (var(--line-height) * 3
+      +
+    (var(--gap)) * 2) * 1.2
+    )
+}
+.burger1-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  width: fit-content;
+  position: relative;
+input{
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+&::before,
+&::after,
+.burger{
+  content: "";
+  height: var(--line-height);
+  width: var(--line-width);
+  background-color: black;
+  transition: 0.5s;
+}
+
+&:has(input:checked)::before{
+  rotate: 45deg;
+  transform-origin: left;
+  width: var(--burger-height);
+}
+&:has(input:checked)::after{
+  rotate: -45deg;
+  transform-origin: left;
+  width: var(--burger-height);
+}
+&:has(input:checked) .burger{
+  background-color: transparent;
+}
+}
